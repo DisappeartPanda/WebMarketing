@@ -1,0 +1,56 @@
+---
+const screenshots = [
+  "/images/projekt1.jpg",
+  "/images/projekt2.jpg",
+  "/images/projekt3.jpg",
+  "/images/projekt4.jpg",
+  "/images/projekt5.jpg"
+];
+---
+
+<section class="referenzen-section" id="reference">
+  <h2 class="section-title">Unsere Referenzen</h2>
+  
+  <div class="carousel" id="carousel">
+    <div class="carousel-track" id="carousel-track">
+      {screenshots.map(src => (
+        <div class="carousel-slide">
+          <img src={src} alt="Projekt-Screenshot" loading="lazy" />
+        </div>
+      ))}
+    </div>
+
+    <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+    <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+  </div>
+</section>
+
+<script is:script>
+  const track = document.getElementById('carousel-track');
+  const prev = document.getElementById('prevBtn');
+  const next = document.getElementById('nextBtn');
+
+  let index = 0;
+  const slides = track.children;
+  const total = slides.length;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  next.addEventListener('click', () => {
+    index = (index + 1) % total;
+    updateCarousel();
+  });
+
+  prev.addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    updateCarousel();
+  });
+
+  // Optional: Auto-scroll
+  setInterval(() => {
+    index = (index + 1) % total;
+    updateCarousel();
+  }, 5000);
+</script>

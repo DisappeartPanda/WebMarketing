@@ -1,0 +1,69 @@
+---
+const services = [
+  {
+    title: "Beratung",
+    extra: "Ganzheitlich und stehts individuel.",
+    desc: [
+      "Digitale Strategieentwicklung",
+      "Branding",
+      "Webdesign"
+    ],
+    icon: "fa-regular fa-comments", // ← hier der Font Awesome Name
+    iconType: "fontawesome"
+
+  },
+ 
+  {
+    title: "Umsetzung",
+    extra: "Präzise und effizeint realisiert.",
+    desc: [
+      "Prozess Optimierung",
+      "Content Creation",
+      "Campaign Management"
+    ],
+    icon: "fa-regular fa-money-bill-1", // ← hier der Font Awesome Name
+    iconType: "fontawesome"
+  }, 
+  {
+    title: "Betreuung",
+    extra: "Nah und auf Augenhöhe.",
+    desc: [
+      "Verwaltung der Website",
+      "UX & SEO Analyse",
+      "Wettbewerbsanalysen"
+    ],
+    icon: "fa-regular fa-handshake", // ← hier der Font Awesome Name
+    iconType: "fontawesome"
+  }
+];
+---
+
+<section class="trust" id="service">
+  <p class="tagline">„Willkommen in Heidelberg“ – ein Standort voller Leben, Geschichte & Gastfreundschaft.</p>
+</section>
+
+<section class="services" >
+  <h2 class="services-heading">Unser Service</h2>
+  <div class="services-list">
+    {services.map(service => (
+      <div class="service-card">
+        {service.iconType === "fontawesome" ? (
+  <i class={service.icon + " service-icon"}></i>
+) : (
+  <img src={service.icon} alt={service.title + ' Icon'} class="service-icon" />
+)}
+        <h3 class="service-title">{service.title}</h3>
+        <h2 class="service-extra"> {service.extra}</h2>
+
+        <ul class="service-list">
+  {service.desc.map(point => (
+    <li>
+      <i class="fa-regular fa-square-check" style="color: #000000;"></i>
+      {point}
+    </li>
+  ))}
+</ul>
+      </div>
+    ))}
+  </div>
+</section>

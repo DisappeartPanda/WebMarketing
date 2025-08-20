@@ -1,0 +1,43 @@
+---
+const navItems = ["Home", "Leistungen", "Preise", "Kontakt"];
+---
+
+<header class="site-header">
+<a href="/" class="site-logo">Wie Marketing
+    <i class="fa-regular fa-circle-question"></i> 
+</a>
+
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    &#9776;
+  </button>
+
+ <nav class="nav-center">
+    <a href="#service" class="nav-link">Services</a>
+    <a href="#reference" class="nav-link">Referenz</a>
+    <a href="#uber-uns" class="nav-link">Über Uns</a>
+  </nav>
+
+</header>
+
+<script is:script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    // Toggle-Menü bei Klick auf Hamburger
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation(); // Klick nicht weiterreichen
+      nav.classList.toggle('active');
+    });
+
+    // Menü schließen bei Klick außerhalb
+    document.addEventListener('click', (e) => {
+      const isClickInsideNav = nav.contains(e.target);
+      const isClickOnHamburger = hamburger.contains(e.target);
+
+      if (!isClickInsideNav && !isClickOnHamburger) {
+        nav.classList.remove('active');
+      }
+    });
+  });
+</script>
