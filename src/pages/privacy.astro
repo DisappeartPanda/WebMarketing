@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Datenschutz – Schweigen ist nicht immer Gold" description="Datenschutzerklärung und Datenschutzrichtlinien">
+  <header class="privacy-sig">
+    <h1 class="title">Unsere Datenschutzrichtlinie</h1>
+  </header>
+
+  <main class="container shell grid two privacy-sig" style="background: url('/images/qm.svg') center no-repeat;">
+    <section class="card inset legal">
+      <div class="grid" style="grid-template-columns: 1fr; gap: 1rem;">
+
+        <div id="ueberblick" class="section">
+          <h2>1. Überblick</h2>
+          <p>„Schweigen ist nicht immer Gold“ respektiert Ihre Privatsphäre und informiert transparent über die Verarbeitung Ihrer personenbezogenen Daten.</p>
+        </div>
+
+        <div id="geltungsbereich" class="section">
+          <h2>2. Geltungsbereich & Rechtsgrundlagen</h2>
+          <p>Diese Datenschutzerklärung gilt, wenn Sie uns über unsere Webseiten, Formulare oder per E‑Mail kontaktieren. Wir verarbeiten Ihre Daten auf Basis von Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), zur Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO) und auf Grundlage unseres berechtigten Interesses an effizienter Kommunikation (Art. 6 Abs. 1 lit. f DSGVO).</p>
+        </div>
+
+        <div id="daten" class="section">
+          <h2>3. Welche Daten verarbeiten wir?</h2>
+          <ul>
+            <li>Kontaktdaten: Vorname, Nachname, Unternehmen (optional), Telefon (optional), E‑Mail, Nachricht</li>
+            <li>Technische Daten: IP-Adresse, Browserinformationen, Herkunft (über Cookies / Analyse-Tools)</li>
+          </ul>
+        </div>
+
+        <div id="zwecke" class="section">
+          <h2>4. Wofür nutzen wir Ihre Daten?</h2>
+          <ul>
+            <li>Zur Beantwortung Ihrer Anfrage</li>
+            <li>Zur Verbesserung unserer Services</li>
+            <li>Optional: Für Newsletter oder Marketingangebote – nur mit Ihrer Einwilligung</li>
+          </ul>
+        </div>
+
+        <div id="weitergabe" class="section">
+          <h2>5. Weitergabe an Dritte</h2>
+          <p>Wir geben Ihre Daten nicht weiter, außer an notwendige Dienstleister (z. B. Hosting, Formularverarbeitung) oder wenn wir gesetzlich dazu verpflichtet sind.</p>
+        </div>
+
+        <div id="newsletter" class="section">
+          <h2>6. Newsletter & Marketing</h2>
+          <p>Wenn Sie keine Werbe-E-Mails mehr erhalten möchten, können Sie sich jederzeit über den Abmeldelink in unseren E‑Mails oder per E‑Mail an <strong>privacy@[deine-domain].de</strong> abmelden.</p>
+        </div>
+
+        <div id="speicherung" class="section">
+          <h2>7. Speicherdauer</h2>
+          <p>Ihre Daten werden gelöscht, sobald der Zweck entfällt oder gesetzliche Aufbewahrungsfristen abgelaufen sind (z. B. 2–3 Jahre). Details erhalten Sie auf Anfrage.</p>
+        </div>
+
+        <div id="aenderungen" class="section">
+          <h2>8. Änderungen dieser Richtlinie</h2>
+          <p>Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren. Datum der letzten Aktualisierung: <strong>{new Date().toLocaleDateString('de-DE')}</strong>.</p>
+        </div>
+
+        <div id="kontakt" class="section">
+          <h2>9. Kontakt / Verantwortlicher</h2>
+          <p>„Schweigen ist nicht immer Gold“<br />
+          [Deine Straße, PLZ Ort]<br />
+          E‑Mail: <strong>privacy@[deine-domain].de</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</BaseLayout>

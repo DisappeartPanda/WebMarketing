@@ -641,7 +641,6 @@ textarea {
 .footer-nav li {
     display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .footer-nav a {
@@ -669,13 +668,12 @@ textarea {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   font-size: 1rem;
   color: var(--color-neutral);
-  gap: 1rem;
 }
 
 .footer-bottom a {
@@ -685,4 +683,51 @@ textarea {
 
 .footer-bottom a:hover {
   text-decoration: underline;
+}
+
+.privacy-sig {
+  font-family: inherit; /* nutzt dein globales CI */
+  color: inherit;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Container */
+.privacy-sig .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.privacy-sig .title {
+  font-weight:800;
+  letter-spacing:-.02em;
+  line-height:1.1;
+  font-size: clamp(1.8rem, 2.4vw + 1.2rem, 3rem);
+  margin:.4rem 2rem;
+}
+
+/* Karten & Sektionen */
+.privacy-sig .card {
+  background-color: transparent;
+  text-align: center;
+  max-width: 800px;   /* damit es gut lesbar bleibt */
+  margin: 1.5rem auto;
+  text-align: left;   /* Text inhaltlich linksbündig für bessere Lesbarkeit */
+}
+
+.privacy-sig .section {
+  background-color: var(--color-secondary);
+  margin-bottom: 2.5rem; /* Abstand zwischen den Sektionen */
+  padding-bottom: 1rem;  /* optional: „Luft“ im Block selbst */
+
+}
+.privacy-sig .section h2 {
+  margin:.2rem 0 .2rem;
+  font-size:1.25rem;
 }
